@@ -40,3 +40,34 @@ body {
     text-underline-offset: 8px;
     font-size: 20px;
 }
+
+.main {
+    display: flex;
+    flex-direction: row;
+}
+
+.main-image {
+    height: 300px;
+    width: 1200px;
+}
+
+.menu-section {
+    display: flex;
+    justify-content: center;
+}
+
+.section-content {
+    width: 1000px;
+}
+
+.h1 {
+    margin-top: 8px;
+    margin-bottom: -20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.star-rating {
+    height: 40px;
+}
