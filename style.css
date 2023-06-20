@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+.headline {
+    height: 80px;
+    background-color: #ff7f00;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.img-headline-left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.img-headline-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.lieferando-logo {
+    height: 45px;
+}
+
+.img-germany {
+    margin-right: 32px;
+    border: 4px solid white;
+    border-radius: 30px;
+}
+
+.adress-headline {
+    color: white;
+    text-underline-offset: 8px;
+    font-size: 20px;
+}
