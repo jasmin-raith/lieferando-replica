@@ -63,7 +63,7 @@ body {
 .restaurant-logo-container {
     width: 75px;
     height: 75px;
-    border-radius: 5px;
+    border-radius: 10px;
     border: 1px solid #f5f3f0;
     position: absolute;
     background-color: white;
@@ -109,3 +109,25 @@ body {
 .menu-bar-category {
     margin-left: 32px;
 }
+
+.food-description-container {
+    border-radius: 10px;
+    border: 1px solid lightgrey;
+}
+
+.food-description {
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.images-from-burgers {
+    height: 110px;
+}
+
+.to-add-button {
+    margin-bottom: 130px;
+    margin-right: -5px;
+}
+
