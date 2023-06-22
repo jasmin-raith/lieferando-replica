@@ -4,7 +4,7 @@ body {
 }
 
 .headline {
-    height: 80px;
+    height: 75px;
     background-color: #ff7f00;
     display: flex;
     justify-content: space-between;
@@ -47,17 +47,39 @@ body {
 }
 
 .main-image {
-    height: 300px;
-    width: 1200px;
+    object-fit: cover;
+    width: 100%;
 }
 
-.menu-section {
+.restaurant-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 320px;
+    right: 50px;
+}
+
+.restaurant-logo-container {
+    width: 75px;
+    height: 75px;
+    border-radius: 5px;
+    border: 1px solid #f5f3f0;
+    position: absolute;
+    background-color: white;
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 65px;
+    display: flex;
 }
 
 .section-content {
-    width: 1000px;
+    padding-left: 120px;
+    padding-right: 120px;
 }
 
 .h1 {
@@ -70,4 +92,20 @@ body {
 
 .star-rating {
     height: 40px;
+}
+
+.menu-bar-section {
+    display: flex;
+    align-items: center;
+    background-color: #f5f3f0;
+    height: 48px;
+}
+
+.menu-bar {
+    display: flex;
+    align-items: center;
+}
+
+.menu-bar-category {
+    margin-left: 32px;
 }
