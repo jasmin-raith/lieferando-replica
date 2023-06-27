@@ -54,10 +54,7 @@ body {
 .restaurant-logo {
     display: flex;
     align-items: center;
-    justify-content: center;
     position: relative;
-    top: 320px;
-    right: 50px;
 }
 
 .restaurant-logo-container {
@@ -70,6 +67,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-left: 120px;
+    top: -63px;
 }
 
 .logo {
@@ -111,23 +110,72 @@ body {
 }
 
 .food-description-container {
+    height: fit-content;
     border-radius: 10px;
     border: 1px solid lightgrey;
 }
 
 .food-description {
     display: flex;
-    align-items: center;
     padding-left: 16px;
     padding-right: 16px;
+}
+
+.picture-and-button {
+    display: flex;
+}
+
+.picture {
+    display: flex;
+    align-items: center;
 }
 
 .images-from-burgers {
     height: 110px;
 }
 
-.to-add-button {
-    margin-bottom: 130px;
-    margin-right: -5px;
+.basket {
+    box-shadow: -1px 1px 5px 0 #9F9F9F;
+}
+
+.basket-container {
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.inner-basket-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.font-from-basket {
+    color: #9F9F9F;
+    text-align: center;
+}
+
+.line {
+    height: 1px;
+    background-color: #9F9F9F;
+    margin: 20px;
+}
+
+.between {
+    display: flex;
+    justify-content: space-between;
+    color: #9F9F9F;
+    margin: 10px;
+}
+
+.to-order-button {
+    color: white;
+    background-color: #D0D0D0;
+    height: 70px;
+    border-radius: 4px;
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
 }
 
