@@ -65,17 +65,17 @@
                     <div class="food-description-container">
                         <div class="food-description">
                             <div>
-                                <div><h3>Hamburger</h3></div>
+                                <div><h3 id="name">Hamburger</h3></div>
                                 <div>mit Zwiebeln, Tomaten, sauren Gurken, Salat, Ketchup und Mayonnaise</div><br>
                                 <div style="font-size: small;">Wahl aus: mit Brioche-Brötchen, mit Sesam-Brötchen Classic, mit Ciabatta-Brötchen, mit Classic Beef einfach, mit Classic Beef Double me und mehr</div>
-                                <div><h3>8,99 €</h3></div>
+                                <div><h3 id="price">8,90 €</h3></div>
                             </div>
                             <div class="picture-and-button">
                                 <div class="picture">
                                     <img class="images-from-burgers" src="img/hamburger.jpg">
                                 </div>
                                 <div style="margin-top: 16px;">
-                                    <img src="img/plus.png">
+                                    <button class="description-add-button" onclick="addToBasket('Hamburger',8.90)"><img src="img/plus.png"></button>
                                 </div>
                             </div>
                         </div>
@@ -87,17 +87,17 @@
                     <div class="food-description-container">
                         <div class="food-description">
                             <div>
-                                <div><h3>Bacon Ranch</h3></div>
+                                <div><h3 id="name">Bacon Ranch</h3></div>
                                 <div>mit Bacon, Tomaten, Salat, Röstzwiebeln, Emmentaler und Chipotle-South-West-Sauce</div><br>
                                 <div style="font-size: small;">Wahl aus: mit Brioche-Brötchen, mit Sesam-Brötchen Classic, mit Ciabatta-Brötchen, mit Classic Beef einfach, mit Classic Beef Double me und mehr</div>
-                                <div><h3>10,99 €</h3></div>
+                                <div><h3 id="price">10,90 €</h3></div>
                             </div>
                             <div class="picture-and-button">
                                 <div class="picture">
                                     <img class="images-from-burgers" src="img/bacon-ranch.jpg">
                                 </div>
                                 <div style="margin-top: 16px;">
-                                    <img src="img/plus.png">
+                                    <button class="description-add-button" onclick="addToBasket('Bacon Ranch',10.90)"><img src="img/plus.png"></button>
                                 </div>
                             </div>
                         </div>
@@ -109,17 +109,17 @@
                     <div class="food-description-container">
                         <div class="food-description">
                             <div>
-                                <div><h3>Hot Crunchy Chicken</h3></div>
+                                <div><h3 id="name">Hot Crunchy Chicken</h3></div>
                                 <div>mit Crunchy Chicken, zart schmelzendem Cheese, Tomaten, Salat, Jalapenos, Ketchup und Aioli</div><br>
                                 <div style="font-size: small;">Wahl aus: mit Sesam-Brötchen Classic, mit Brioche-Brötchen, mit Ciabatta-Brötchen, mit Crunchy Chicken einfach, mit Crunchy Chicken Double me und mehr</div>
-                                <div><h3>9,99 €</h3></div>
+                                <div><h3 id="price">9,90 €</h3></div>
                             </div>
                             <div class="picture-and-button">
                                 <div class="picture">
                                     <img class="images-from-burgers" src="img/hot-crunchy-chicken.avif">
                                 </div>
                                 <div style="margin-top: 16px;">
-                                    <img src="img/plus.png">
+                                    <button class="description-add-button" onclick="addToBasket('Hot Crunchy Chicken',9.90)"><img src="img/plus.png"></button>
                                 </div>
                             </div>
                         </div>
@@ -131,17 +131,17 @@
                     <div class="food-description-container">
                         <div class="food-description">
                             <div>
-                                <div><h3>Inca Veggie</h3></div>
+                                <div><h3 id="name">Inca Veggie</h3></div>
                                 <div>mit Quinoa Chili Patty, Ciabatta-Brötchen, Mango-Chilisauce, roter Paprika, Mango, Babyspinat, Currysauce, Mayonnaise und roten Zwiebeln</div><br>
                                 <div style="font-size: small;">Wahl aus: mit Ciabatta-Brötchen, mit Brioche-Brötchen, mit Sesam-Brötchen Classic, Quinoa Patty einfach, Quinoa Patty Double me und mehr</div>
-                                <div><h3>9,99 €</h3></div>
+                                <div><h3 id="price">9,90 €</h3></div>
                             </div>
                             <div class="picture-and-button">
                                 <div class="picture">
                                     <img class="images-from-burgers" src="img/inca-veggie.jpg">
                                 </div>
                                 <div style="margin-top: 16px;">
-                                    <img src="img/plus.png">
+                                    <button class="description-add-button" onclick="addToBasket('Inca Veggie',9.90)"><img src="img/plus.png"></button>
                                 </div>
                             </div>
                         </div>
@@ -154,11 +154,13 @@
 
 
         <div class="basket">   <!-- right side / basket -->
-            <div class="basket-container">
+            <div class="basket-container" >
                 <div class="inner-basket-container">
                     <div style="color: #626262;"><h2>Warenkorb</h2></div><br>
-                    <div><img src="img/warenkorb.png"></div><br>
-                    <div class="font-from-basket">Füge einige leckere Gerichte aus der Speiesekarte hinzu und bestelle dein Essen.</div>
+                    <div class="inner-basket-container" id="basketContainer">
+                        <div><img src="img/warenkorb.png"></div><br>
+                        <div class="font-from-basket">Füge einige leckere Gerichte aus der Speiesekarte hinzu und bestelle dein Essen.</div>
+                    </div>
                 </div>
 
                 <div class="line"></div>
@@ -170,7 +172,7 @@
 
                 <div class="between">
                     <div>Gesamt</div>
-                    <div>0,00 €</div>
+                    <div id="finalSum">0,00 €</div>
                 </div>
 
                 <div class="line"></div>

@@ -43,7 +43,6 @@ body {
 
 .main {
     display: flex;
-    flex-direction: row;
 }
 
 .main-image {
@@ -119,6 +118,7 @@ body {
     display: flex;
     padding-left: 16px;
     padding-right: 16px;
+    justify-content: space-between;
 }
 
 .picture-and-button {
@@ -134,8 +134,18 @@ body {
     height: 110px;
 }
 
+.description-add-button {
+    background-color: white;
+    border: white;
+    cursor: pointer;
+}
+
 .basket {
     box-shadow: -1px 1px 5px 0 #9F9F9F;
+    max-width: 380px;
+    height: 100vh;
+    position: sticky;
+    top: 0;
 }
 
 .basket-container {
@@ -145,6 +155,7 @@ body {
 
 .inner-basket-container {
     display: flex;
+    width: 100%;
     flex-direction: column;
     align-items: center;
 }
@@ -176,6 +187,28 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    
 }
 
+.plus-minus-button {
+    height: 20px;
+    width: 20px;
+    padding: 0;
+}
+
+.filled-basket {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.between-amount-and-button {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.price-and-delete{
+    width: 25%;
+    display: flex;
+    justify-content: space-between;
+}
