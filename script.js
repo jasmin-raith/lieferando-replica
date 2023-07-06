@@ -41,7 +41,11 @@ function updateShoppingBasket() {
         sum += prices[i] * amounts[i];
     }
 
+    document.getElementById('subtotal').innerHTML = sum.toFixed(2).replace('.', ',');
     document.getElementById('finalSum').innerHTML = sum.toFixed(2).replace('.', ',');
+    let container = document.getElementById('basketContainer');
+        container.innerHTML = ``;
+
 }
 
 
@@ -54,7 +58,7 @@ function renderBasket() {
 
         for (let i = 0; i < names.length; i++) {
             let name = names[i];
-            let price = prices[i];
+            let price = prices[i] * amounts[i];
             let amount = amounts[i];
             container.innerHTML += /*html*/ `
             <div class="filled-basket">
@@ -63,8 +67,8 @@ function renderBasket() {
                         ${amount}x ${name}
                     </div>    
                     <div style="display: flex;">
-                        <button class="plus-minus-button">+</button> 
-                        <button class="plus-minus-button">-</button>
+                        <button class="plus-minus-button" onclick="addMoreFood(${i})">+</button> 
+                        <button class="plus-minus-button" onclick="deleteSingleFood(${i})">-</button>
                     </div>
                 </div>
                 <div class="price-and-delete">
@@ -72,10 +76,37 @@ function renderBasket() {
                         ${price.toFixed(2).replace('.', ',')} €
                     </div>
                     <div>
-                        <img src="/img/mülleimer.svg">
+                        <img onclick="deleteAllFood(${i})" src="/img/mülleimer.svg">
                     </div>
                 </div>
             </div>`;
         }
+    }
+}
+
+
+function deleteAllFood(i) {
+    names.splice(i, 1);
+    prices.splice(i, 1);
+    amounts.splice(i, 1);
+    updateShoppingBasket();
+    renderBasket();
+}
+
+
+function addMoreFood(i) {
+    amounts[i]++;
+    updateShoppingBasket();
+    renderBasket();
+}
+
+
+function deleteSingleFood(i) {
+    if (amounts[i] == 1) {
+        deleteAllFood(i);
+    } else {
+        amounts[i]--;
+        updateShoppingBasket();
+        renderBasket();
     }
 }
