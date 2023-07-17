@@ -151,6 +151,7 @@ body {
 .basket-container {
     padding-left: 24px;
     padding-right: 24px;
+    min-width: 300px;
 }
 
 .inner-basket-container {
@@ -193,6 +194,11 @@ body {
     height: 20px;
     width: 20px;
     padding: 0;
+}
+
+.filled-basket-outer-container {
+    display: flex;
+    flex-direction: column;
 }
 
 .filled-basket {

@@ -40,6 +40,7 @@ function addToBasket(name, price) {
 function renderBasket() {
     let subTotal = 0;
     let finalSum = 0;
+    let restAmountNeedet = 0;
 
 
     for (let i = 0; i < prices.length; i++) {
@@ -48,10 +49,13 @@ function renderBasket() {
 
     if (subTotal == 0) {
         document.getElementById('deliveryCost').style.display = 'none';
+        document.getElementById('emptyCard').style.display = 'flex';
         finalSum = subTotal;
     } else {
         document.getElementById('deliveryCost').style.display = 'flex';
+        document.getElementById('emptyCard').style.display = 'none';
         finalSum = subTotal + deliveryCosts;
+        restAmountNeedet = 10 - subTotal;
     }
 
     document.getElementById('subtotal').innerHTML = subTotal.toFixed(2).replace('.', ',');
@@ -87,8 +91,28 @@ function renderBasket() {
             </div>
         </div>`;
     }
-}
+    
 
+    if (subTotal <= 10) {
+        let amountNeedet= document.getElementById('amountNeedet');
+        amountNeedet.innerHTML = /*html*/ `
+            <div class="between">
+                <div>Betrag der benötigt wird um den Mindestbestellwert zu erreichen.</div>
+                <div>${restAmountNeedet.toFixed(2).replace('.', ',')}€</div>
+            </div>
+            <div class="line"></div>
+        `;
+        document.getElementById('minimumOrderAmount').style.display = 'flex';
+        document.getElementById('readeToOrderButton').style.background = '#D0D0D0';
+    } else {
+        document.getElementById('minimumOrderAmount').style.display = 'none';
+        amountNeedet.innerHTML = /*html*/ `
+            <div>Sie haben den Mindestbestellwert von 10,00 € erreicht.</div>
+        `;
+        document.getElementById('readeToOrderButton').style.background = 'blue';
+    }
+}    
+    
 
 function deleteAllFood(i) {
     names.splice(i, 1);

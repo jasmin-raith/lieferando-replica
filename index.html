@@ -155,15 +155,18 @@
 
         <div class="basket">   <!-- right side / basket -->
             <div class="basket-container" >
-                <div class="inner-basket-container">
-                    <div style="color: #626262;"><h2>Warenkorb</h2></div><br>
-                    <div class="inner-basket-container" id="basketContainer">
-                        <div><img src="img/warenkorb.png"></div><br>
-                        <div class="font-from-basket">Füge einige leckere Gerichte aus der Speiesekarte hinzu und bestelle dein Essen.</div>
+                <div>
+                    <div class="inner-basket-container" style="color: #626262;"><h2>Warenkorb</h2></div><br>
+                    <div>
+                        <div class="inner-basket-container" id="emptyCard">
+                            <div><img src="img/warenkorb.png"></div><br>
+                            <div class="font-from-basket">Füge einige leckere Gerichte aus der Speiesekarte hinzu und bestelle dein Essen.</div>
+                        </div>
+                        <div class="filled-basket-outer-container" id="basketContainer"></div>
                     </div>
                 </div>
 
-                <div id="sum">
+                <div>
                     <div class="line"></div>
 
                     <div class="between">
@@ -184,9 +187,11 @@
                     <div class="line"></div>
                 </div>
 
-                <div class="font-from-basket">Leider kannst Du noch nicht bestellen. Burgerme Restaurant liefert erst ab einem Mindestbestellwert von 10,00 € (exkl. Lieferkosten).</div>
+                <div id="amountNeedet"></div>
 
-                <div class="to-order-button">
+                <div id="minimumOrderAmount" class="font-from-basket" style="display: flex;">Leider kannst Du noch nicht bestellen. Burgerme Restaurant liefert erst ab einem Mindestbestellwert von 10,00 € (exkl. Lieferkosten).</div>
+
+                <div id="readeToOrderButton" class="to-order-button">
                     <div>Bestellen</div>
                 </div>
             </div>
