@@ -50,10 +50,14 @@ function renderBasket() {
     if (subTotal == 0) {
         document.getElementById('deliveryCost').style.display = 'none';
         document.getElementById('emptyCard').style.display = 'flex';
+        Array.from(document.getElementById('costs').children).forEach(child => child.style.color = '#9F9F9F');
         finalSum = subTotal;
+        document.getElementById('amountNeedet').style.display = 'none';
     } else {
         document.getElementById('deliveryCost').style.display = 'flex';
         document.getElementById('emptyCard').style.display = 'none';
+        document.getElementById('amountNeedet').style.display = 'block';
+        Array.from(document.getElementById('costs').children).forEach(child => child.style.color = 'black');
         finalSum = subTotal + deliveryCosts;
         restAmountNeedet = 10 - subTotal;
     }
@@ -96,7 +100,7 @@ function renderBasket() {
     if (subTotal <= 10) {
         let amountNeedet= document.getElementById('amountNeedet');
         amountNeedet.innerHTML = /*html*/ `
-            <div class="between">
+            <div class="between" style="color: black">
                 <div>Betrag der benötigt wird um den Mindestbestellwert zu erreichen.</div>
                 <div>${restAmountNeedet.toFixed(2).replace('.', ',')}€</div>
             </div>

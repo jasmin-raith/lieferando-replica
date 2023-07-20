@@ -96,7 +96,8 @@ body {
     display: flex;
     align-items: center;
     background-color: #f5f3f0;
-    height: 48px;
+    height: fit-content;
+    padding: 10px;
 }
 
 .menu-bar {
@@ -151,7 +152,7 @@ body {
 .basket-container {
     padding-left: 24px;
     padding-right: 24px;
-    min-width: 300px;
+    min-width: 330px;
 }
 
 .inner-basket-container {
