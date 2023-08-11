@@ -90,7 +90,7 @@ function renderBasket() {
                     ${price.toFixed(2).replace('.', ',')} €
                 </div>
                 <div>
-                    <img onclick="deleteAllFood(${i})" src="/img/mülleimer.svg">
+                    <img onclick="deleteAllFood(${i})" src="img/mülleimer.svg">
                 </div>
             </div>
         </div>`;
